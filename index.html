@@ -17,6 +17,11 @@
             100% { transform: translateY(0px); }
         }
         .float-anim { animation: float 4s ease-in-out infinite; }
+        .animate-spin-slow { animation: spin 8s linear infinite; }
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
     </style>
 </head>
 <body class="bg-stone-50 text-slate-900">
@@ -24,9 +29,8 @@
     <nav class="fixed top-0 w-full z-50 glass border-b border-stone-200">
         <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
             <a href="#home" class="flex items-center">
-                <img src="image.jpg" alt="Madrasat Badrul Islam Logo" class="h-10 w-auto object-contain">
+                <img src="image.jpg" alt="Logo" class="h-10 w-auto object-contain">
             </a>
-            
             <div class="hidden md:flex space-x-8 text-[10px] font-black uppercase tracking-widest text-slate-600">
                 <a href="#home" class="hover:text-yellow-600 transition">Home</a>
                 <a href="#about" class="hover:text-yellow-600 transition">Details</a>
@@ -42,7 +46,7 @@
             <div class="flex flex-col md:flex-row items-center gap-12">
                 
                 <div class="md:w-3/5 text-center md:text-left">
-                    <h2 class="uppercase tracking-[0.4em] text-yellow-500 text-[10px] font-black mb-4">Madrasat Badrul Islam Presents</h2>
+                    <h2 class="uppercase tracking-[0.4em] text-yellow-500 text-[10px] font-black mb-4 text-balance">Madrasat Badrul Islam Presents</h2>
                     <h1 class="serif text-4xl md:text-6xl lg:text-7xl font-black mb-6 leading-tight">Annual Night of Mercies & Favours</h1>
                     <p class="text-lg md:text-xl text-stone-300 italic serif mb-8">
                         The Night of Ramadan Day 29<br>
@@ -87,15 +91,15 @@
 
     <section id="about" class="py-20 max-w-6xl mx-auto px-6">
         <div class="grid md:grid-cols-3 gap-8 text-center">
-            <div class="bg-white p-8 shadow-xl border-t-4 border-[#0d3b36] rounded-2xl hover:-translate-y-1 transition">
+            <div class="bg-white p-8 shadow-xl border-t-4 border-[#0d3b36] rounded-2xl">
                 <h3 class="font-black text-lg mb-3 uppercase tracking-tighter">9:30 PM Prompt</h3>
                 <p class="text-slate-600 text-sm italic">Commencing with special Azhakir and prayers.</p>
             </div>
-            <div class="bg-white p-8 shadow-xl border-t-4 border-yellow-500 rounded-2xl hover:-translate-y-1 transition">
+            <div class="bg-white p-8 shadow-xl border-t-4 border-yellow-500 rounded-2xl">
                 <h3 class="font-black text-lg mb-3 uppercase tracking-tighter text-[#0d3b36]">Open Space Villa</h3>
                 <p class="text-slate-600 text-sm">Bintilaye Area Ogunse, Villa 7000, Ogun State.</p>
             </div>
-            <div class="bg-white p-8 shadow-xl border-t-4 border-[#0d3b36] rounded-2xl hover:-translate-y-1 transition">
+            <div class="bg-white p-8 shadow-xl border-t-4 border-[#0d3b36] rounded-2xl">
                 <h3 class="font-black text-lg mb-3 uppercase tracking-tighter">Dress Code</h3>
                 <p class="text-slate-600 text-sm">Strictly <span class="font-bold">Pure White</span> attire.</p>
             </div>
@@ -111,20 +115,28 @@
             </div>
             
             <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="text-center">
-                    <img src="1002031174.jpg" class="aspect-square w-full object-cover rounded-3xl border-2 border-yellow-500/20 mb-4 shadow-lg hover:border-yellow-500 transition">
+                <div class="text-center group">
+                    <div class="aspect-square w-full bg-slate-900/50 rounded-3xl overflow-hidden border-2 border-yellow-500/20 mb-4 shadow-lg p-2 group-hover:border-yellow-500 transition-all">
+                        <img src="1002031174.jpg" class="w-full h-full object-contain" alt="Sheikh Nurudeen Edaolaropin">
+                    </div>
                     <p class="font-black text-[10px] uppercase text-yellow-500 tracking-widest">Sheikh Nurudeen Edaolaropin</p>
                 </div>
-                <div class="text-center">
-                    <img src="1002030698.jpg" class="aspect-square w-full object-cover rounded-3xl border-2 border-white/10 mb-4 shadow-lg hover:border-white transition">
+                <div class="text-center group">
+                    <div class="aspect-square w-full bg-slate-900/50 rounded-3xl overflow-hidden border-2 border-white/10 mb-4 shadow-lg p-2 group-hover:border-white transition-all">
+                        <img src="1002030698.jpg" class="w-full h-full object-contain" alt="Sheikh Al-Mukthar El-Malawi">
+                    </div>
                     <p class="font-black text-[10px] uppercase text-white tracking-widest">Sheikh Al-Mukthar El-Malawi</p>
                 </div>
-                <div class="text-center">
-                    <img src="1002031109.jpg" class="aspect-square w-full object-cover rounded-3xl border-2 border-white/10 mb-4 shadow-lg hover:border-white transition">
+                <div class="text-center group">
+                    <div class="aspect-square w-full bg-slate-900/50 rounded-3xl overflow-hidden border-2 border-white/10 mb-4 shadow-lg p-2 group-hover:border-white transition-all">
+                        <img src="1002031109.jpg" class="w-full h-full object-contain" alt="Sheikh Maikaka">
+                    </div>
                     <p class="font-black text-[10px] uppercase text-white tracking-widest">Sheikh Maikaka</p>
                 </div>
-                <div class="text-center">
-                    <img src="IMG-20260303-WA0006.jpg" class="aspect-square w-full object-cover rounded-3xl border-2 border-white/10 mb-4 shadow-lg hover:border-white transition">
+                <div class="text-center group">
+                    <div class="aspect-square w-full bg-slate-900/50 rounded-3xl overflow-hidden border-2 border-white/10 mb-4 shadow-lg p-2 group-hover:border-white transition-all">
+                        <img src="IMG-20260303-WA0006.jpg" class="w-full h-full object-contain" alt="Sheikh Zhugluly">
+                    </div>
                     <p class="font-black text-[10px] uppercase text-white tracking-widest">Sheikh Zhugluly</p>
                 </div>
             </div>
@@ -135,12 +147,8 @@
         <div class="max-w-4xl mx-auto bg-white rounded-[3rem] p-12 text-center shadow-2xl border border-stone-100">
             <h2 class="serif text-4xl font-black text-[#0d3b36] mb-6">Join Us Online</h2>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="https://youtube.com/@abdulmuizzabimbola9480" class="flex items-center justify-center gap-3 bg-red-600 text-white px-10 py-4 rounded-2xl font-black transition hover:bg-red-700">
-                    YouTube Live
-                </a>
-                <a href="https://instagram.com/_bimballerrr" class="flex items-center justify-center gap-3 bg-black text-white px-10 py-4 rounded-2xl font-black transition hover:bg-slate-800">
-                    Instagram Live
-                </a>
+                <a href="https://youtube.com/@abdulmuizzabimbola9480" target="_blank" class="flex items-center justify-center gap-3 bg-red-600 text-white px-10 py-4 rounded-2xl font-black transition hover:bg-red-700">YouTube Live</a>
+                <a href="https://instagram.com/_bimballerrr" target="_blank" class="flex items-center justify-center gap-3 bg-black text-white px-10 py-4 rounded-2xl font-black transition hover:bg-slate-800">Instagram Live</a>
             </div>
         </div>
     </section>
@@ -152,7 +160,7 @@
     <script>
         const targetDate = new Date("March 17, 2026 21:30:00").getTime();
 
-        const countdownFunction = setInterval(function() {
+        const updateCountdown = () => {
             const now = new Date().getTime();
             const distance = targetDate - now;
 
@@ -161,16 +169,19 @@
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            document.getElementById("days").innerHTML = days.toString().padStart(2, '0');
-            document.getElementById("hours").innerHTML = hours.toString().padStart(2, '0');
-            document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, '0');
-            document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, '0');
+            document.getElementById("days").innerText = String(days).padStart(2, '0');
+            document.getElementById("hours").innerText = String(hours).padStart(2, '0');
+            document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
+            document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
 
             if (distance < 0) {
-                clearInterval(countdownFunction);
+                clearInterval(countdownInterval);
                 document.getElementById("countdown").innerHTML = "<p class='text-yellow-500 font-black text-2xl uppercase tracking-widest animate-pulse'>Live Now</p>";
             }
-        }, 1000);
+        };
+
+        const countdownInterval = setInterval(updateCountdown, 1000);
+        updateCountdown();
     </script>
 
 </body>
