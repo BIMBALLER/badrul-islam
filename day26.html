@@ -12,9 +12,26 @@
         .sheikh-gradient {
             background: linear-gradient(to top, #134e4a 0%, transparent 40%);
         }
+
+        /* PDF & PRINT OPTIMIZATION */
         @media print {
-            body { background-color: white !important; -webkit-print-color-adjust: exact; }
-            .max-w-5xl { box-shadow: none !important; border: none !important; }
+            body { 
+                -webkit-print-color-adjust: exact; 
+                print-color-adjust: exact; 
+                background-color: white !important;
+            }
+            .max-w-5xl { 
+                box-shadow: none !important; 
+                border: none !important;
+                width: 100% !important;
+            }
+            /* Explicit color forcing for PDF printers */
+            .bg-teal-900 { background-color: #134e4a !important; }
+            .bg-teal-600 { background-color: #0d9488 !important; }
+            .bg-teal-50 { background-color: #f0fdfa !important; }
+            .bg-slate-50 { background-color: #f8fafc !important; }
+            .text-teal-900 { color: #134e4a !important; }
+            .text-teal-700 { color: #0f766e !important; }
         }
     </style>
 </head>
@@ -30,7 +47,7 @@
                 <span class="text-3xl leading-none">26</span>
             </div>
 
-            <img src="IMG20240714125550.jpg" alt="Sheikh" class="relative z-10 max-h-[90%] object-contain drop-shadow-[0_20px_20px_rgba(0,0,0,0.5)]">
+            <img src="IMG20240714125550.jpg" alt="Sheikh" class="relative z-10 max-h-[90%] w-auto object-contain drop-shadow-[0_20px_20px_rgba(0,0,0,0.5)]">
             
             <div class="absolute inset-0 z-20 sheikh-gradient"></div>
 

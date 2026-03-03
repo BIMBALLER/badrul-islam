@@ -14,7 +14,7 @@
         @media print {
             @page {
                 size: A4;
-                margin: 0; /* Removes browser headers/footers */
+                margin: 0;
             }
             body { 
                 background-color: white !important; 
@@ -23,14 +23,19 @@
                 margin: 0;
                 padding: 0;
             }
-            .max-w-5xl { 
+            .max-w-4xl { 
                 box-shadow: none !important; 
                 border: none !important; 
                 width: 100% !important; 
-                height: 100vh; /* Forces content to stay within viewport height */
-                display: flex;
-                flex-direction: column;
+                height: 100vh;
             }
+            /* Ensure background colors render in PDF */
+            .bg-\[\#0d3b36\] { background-color: #0d3b36 !important; }
+            .bg-yellow-500 { background-color: #eab308 !important; }
+            .bg-\[\#fdfcf7\] { background-color: #fdfcf7 !important; }
+            .bg-gray-900 { background-color: #111827 !important; }
+            .text-white { color: #ffffff !important; }
+            .text-yellow-500 { color: #eab308 !important; }
         }
     </style>
 </head>
@@ -54,17 +59,17 @@
                 <h2 class="text-[#0d3b36] font-black text-[9px] tracking-[0.3em] uppercase mb-1">Madrasat Badrul Islam Presents</h2>
                 <h1 class="serif text-2xl md:text-3xl font-black text-[#0d3b36] leading-tight">Annual Night of Mercies & Favours</h1>
                 <div class="bg-yellow-500 text-[#0d3b36] px-4 py-0.5 mt-2 rounded-full font-black text-[10px] tracking-widest uppercase">
-                    Lailatu-ul Qadr
+                    Lailatu-ul Qadr Grand Finale
                 </div>
             </div>
         </div>
 
         <div class="flex flex-row flex-grow">
             <div class="w-1/2 bg-gray-900 relative min-h-[350px] flex items-end justify-center overflow-hidden">
-                <div class="absolute top-4 left-4 z-30 bg-yellow-500 text-black font-black rounded-full w-14 h-14 flex flex-col items-center justify-center border-2 border-white">
+                <div class="absolute top-4 left-4 z-30 bg-yellow-500 text-black font-black rounded-full w-14 h-14 flex flex-col items-center justify-center border-2 border-white shadow-lg">
                     <span class="text-[7px]">DAY</span><span class="text-xl">29</span>
                 </div>
-                <img src="IMG_20260303_121722.jpg" alt="Chief Host" class="relative z-10 max-h-[90%] object-contain">
+                <img src="IMG_20260303_121722.jpg" alt="Chief Host" class="relative z-10 max-h-[95%] w-auto object-contain">
                 <div class="absolute inset-0 z-20 sheikh-gradient"></div>
                 <div class="absolute bottom-4 z-30 text-center w-full">
                     <p class="text-yellow-400 font-black text-[8px] uppercase tracking-widest">Chief Host</p>
@@ -86,7 +91,7 @@
                     </div>
                     <div class="bg-white p-2 shadow-sm border-l-2 border-yellow-500">
                         <h4 class="text-[8px] font-black uppercase text-gray-400">Dress Code</h4>
-                        <p class="font-black text-sm text-[#0d3b36]">WHITE</p>
+                        <p class="font-black text-sm text-[#0d3b36]">PURE WHITE</p>
                     </div>
                 </div>
 
@@ -115,12 +120,12 @@
 
         <div class="bg-[#f8f9fa] p-4 border-t-[4px] border-yellow-500">
             <div class="text-center mb-3">
-                <h3 class="font-serif italic text-md font-black text-[#0d3b36]">Invited Guest Speakers/Azhakir</h3>
+                <h3 class="font-serif italic text-md font-black text-[#0d3b36]">Invited Guest Speakers & Azhakir</h3>
                 <div class="w-10 h-0.5 bg-yellow-500 mx-auto"></div>
             </div>
 
             <div class="grid grid-cols-4 gap-2 max-w-3xl mx-auto">
-                <div class="text-center bg-[#0d3b36] p-1.5 rounded shadow-sm">
+                <div class="text-center bg-[#0d3b36] p-1.5 rounded shadow-sm border border-yellow-600">
                     <div class="w-full aspect-square bg-gray-800 rounded mb-1 overflow-hidden border border-yellow-500">
                         <img src="1002031174.jpg" class="w-full h-full object-cover">
                     </div>
